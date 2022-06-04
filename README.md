@@ -1,6 +1,6 @@
 # Front-FWS - Frontend FrameWork Studentosi 
 
-Front-FWS - Это JavaScript Framework для Front части сайта Studentosi.com. Основная технология - это SPA (Single Page Application) 
+Front-FWS - Это JavaScript Framework для Front части сайта Studentosi.com. Основная технология - это SPA (Single Page Application). Данный фреймворк разрабатывался под клиентскую часть сайт STUDENTOSI.COM, Основные модули Node.JS + Express среда сборки Webpack + uglifyjs.
 
 Front-FWS имеет несколько видов сборки и запуска.
 
