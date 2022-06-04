@@ -1,0 +1,38 @@
+{
+  "name": "front-fws",
+  "version": "1.0.0",
+  "description": "JavaScript framework for frontend",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:dev": "node server.js",
+    "start:prod": "node server.min.js",
+    "build:cli": "webpack --config webpack.config.js",
+    "build:srv": "uglifyjs server.js -o server.min.js",
+    "build:all": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js",
+    "build:prod": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js && node server.min.js",
+  },
+  "keywords": [
+    "UI",
+    "frontend",
+    "FWS",
+    "framework",
+    "studentosi",
+    "js"
+  ],
+  "author": "Misha <STUDENTOSI>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "express": "^4.18.1",
+    "html-webpack-plugin": "^5.5.0",
+    "path": "^0.12.7",
+    "path-browserify": "^1.0.1",
+    "uglify-js": "^3.15.5",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.9.1"
+  }
+}
