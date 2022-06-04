@@ -10,7 +10,7 @@
     "build:cli": "webpack --config webpack.config.js",
     "build:srv": "uglifyjs server.js -o server.min.js",
     "build:all": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js",
-    "build:prod": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js && node server.min.js",
+    "build:prod": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js && node server.min.js"
   },
   "keywords": [
     "UI",
