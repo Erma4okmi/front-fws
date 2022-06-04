@@ -4,13 +4,9 @@
   "description": "JavaScript framework for frontend",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start:dev": "node server.js",
     "start:prod": "node server.min.js",
-    "build:cli": "webpack --config webpack.config.js",
-    "build:srv": "uglifyjs server.js -o server.min.js",
-    "build:all": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js",
-    "build:prod": "webpack --config webpack.config.js && uglifyjs server.js -o server.min.js && node server.min.js"
+    "build": "webpack --mode production && uglifyjs server.js -o server.min.js"
   },
   "keywords": [
     "UI",
