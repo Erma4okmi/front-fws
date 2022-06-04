@@ -1,34 +1,33 @@
-# Expack - Express and Webpack Boilerplate
+# Front-FWS - Frontend FrameWork Studentosi 
 
-Expack is the bare-bones Express and Webpack boilerplate with ES6+ babel transpilation, ESLint linting, Hot Module Reloading, and Jest test framework enabled.
+Front-FWS - Это JavaScript Framework для Front части сайта Studentosi.com. Основная технология - это SPA (Single Page Application) 
 
-Expack has two build modes: Development and Production.
+Front-FWS имеет несколько видов сборки и запуска.
 
-When you run `npm run buildDev`, Javascript, HTML, and CSS files are unminified and not uglified, meaning that you can easily inspect them in Chrome Dev Tools. Hot Module Reloading is enabled via `webpack-dev-middleware` and `webpack-hot-middleware`. 
+Когда ты выполняешь `npm run start:dev`, Node.JS Запускает сервер и проект выпускается в режиме разработки. 
 
-When you run `npm run buildProd`, Javascript, HTML, and CSS files are all minified and uglified, and images are encoded as Base64 directly into your CSS file, which results in less calls to the server for image files.
+Когда ты выполняешь `npm run start:prod`, Node.JS Запускает собранную версию сервера. 
 
-## Google App Engine Flex Deployment
+Когда ты выполняешь `npm run build:cli`, Webpack запускает сборку клиентской части. 
 
-Expack can be deployed directly to Google App Engine Flex with the command `npm run deploy`. **IMPORTANT:** Currently `app.yaml` is configured to use minimal resources to save on cost, which is great for development but terrible for production. Please review and update `app.yaml` to suit your own needs.
+Когда ты выполняешь `npm run build:srv`, Webpack запускает сборку серверной части. 
 
-## Installation & Usage
+Когда ты выполняешь `npm run build:all`, Первым делом происходит сборка клиента и выходит минифицированный файл JS, далее происходит сборка сервера. 
 
-    git clone https://github.com/bengrunfeld/expack.git
-    cd expack
+Когда ты выполняешь `npm run build:prod`, Первым делом происходит сборка клиента и выходит минифицированный файл JS, далее происходит сборка сервера, после заверщения всех операци, происходит запуск сервера. 
+
+## Установка & Использование
+
+    git clone https://github.com/Erma4okmi/front-fws
+    cd front-fws
     npm install
     
-    npm run buildDev        // for development
+    npm run start:dev        // for development
         // OR
-    npm run buildProd
-    
-    npm start               // navigate to localhost:8080 for local dev
-
-### For testing
-
-    npm test                // runs test
-    npm run coverage        // generates a coverage report
+    npm run build:prod
+                             // for production 
+    npm start                // navigate to localhost:8080 for local dev
 
 ## Security
 
-Please ensure that your version of Node and NPM are up to date, and run `npm audit` after installation to ensure that no vulnerabilities exist. If they do, follow the audits instructions on how to resolve them. 
+Пожалуйста, убедитесь, что ваша версия Node и NPM обновлена, и запустите `npm audit` после установки, чтобы убедиться в отсутствии уязвимостей. Если это так, следуйте инструкциям аудита по их устранению.
