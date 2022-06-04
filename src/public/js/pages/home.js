@@ -1,11 +1,20 @@
+// Подключаем основу.
 import AbstractView from "./AbstractView.js";
 
+// Стандартный класс унаследован от основы.
 export default class extends AbstractView {
+
+    // Конструктор с параметрами.
     constructor(params) {
+
+        // Кидаем в родительский класс.
         super(params);
+
+        // Меняем Title.
         this.setTitle("Dashboard");
     }
 
+    // Выводим html.
     async getHtml() {
         return `
             <h1>Добро пожаловать!</h1>
