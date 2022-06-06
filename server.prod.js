@@ -8,13 +8,13 @@ const path = require("path");
 const app = express();
 
 // Подключение файлов.
-app.use("/public", express.static(path.resolve(__dirname, "src", "public")));
+app.use("/public", express.static(path.resolve(__dirname, "public")));
 
 // Направить все маршруты на index.html
 app.get("/*", (req, res) => {
 
     // Вывести index.html
-    res.sendFile(path.resolve(__dirname, "src", "public", "index.html"));
+    res.sendFile(path.resolve(__dirname, "public", "index.html"));
 });
 
 // Слушаем порт 8080.

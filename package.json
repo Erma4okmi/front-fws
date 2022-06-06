@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "node server.js",
-    "start:prod": "node server.min.js",
-    "build": "webpack --mode production && uglifyjs server.js -o server.min.js"
+    "start:prod": "node dist/server.min.js",
+    "build:prod": "webpack --mode production && uglifyjs server.prod.js -o dist/server.min.js"
   },
   "keywords": [
     "UI",
@@ -14,9 +14,10 @@
     "FWS",
     "framework",
     "studentosi",
-    "js"
+    "js",
+    "spa"
   ],
-  "author": "Misha <STUDENTOSI>",
+  "author": "Misha <STUDENTOSI> Ermakov",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1"
