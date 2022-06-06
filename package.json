@@ -6,7 +6,7 @@
   "scripts": {
     "start:dev": "node server.js",
     "start:prod": "node dist/server.min.js",
-    "build:prod": "webpack --mode production && uglifyjs server.prod.js -o dist/server.min.js"
+    "build:prod": "webpack --mode production && javascript-obfuscator dist/public/js/router.js -o dist/public/js/router.min.js && uglifyjs server.prod.js -m -o dist/server.min.js && rm dist/public/js/router.js"
   },
   "keywords": [
     "UI",
@@ -25,6 +25,7 @@
   "devDependencies": {
     "express": "^4.18.1",
     "html-webpack-plugin": "^5.5.0",
+    "javascript-obfuscator": "^4.0.0",
     "path": "^0.12.7",
     "path-browserify": "^1.0.1",
     "uglify-js": "^3.15.5",
