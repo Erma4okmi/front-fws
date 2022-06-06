@@ -13,6 +13,6 @@ module.exports = {
     path: path.resolve(__dirname, 'dist/public/js'),
 
 	// Указываем имя этого файла
-    filename: 'router.min.js',
+    filename: 'router.js',
   },
 };
