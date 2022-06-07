@@ -7,6 +7,9 @@ const path = require("path");
 // Создаём модель функции.
 const app = express();
 
+// Порт сервера.
+const port = 80
+
 // Подключение файлов.
 app.use("/public", express.static(path.resolve(__dirname, "src", "public")));
 
@@ -17,12 +20,12 @@ app.get("/*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "src", "public", "index.html"));
 });
 
-// Слушаем порт 8080.
-app.listen(process.env.PORT || 8080, () => {
+// Слушаем порт.
+app.listen(process.env.PORT || port, () => {
 
-    // Вывод информации.
-    console.log("Server started successfully! \n")
-    console.log("HOST: localhost:8080 \n")
-    console.log("Ctrl + C - it`s stop server\n")
+    // Выводим инфу.
+    console.log("[Server:dev started successfully] - https://localhost/")
+    console.log("[Server:dev started successfully] - Ctrl + C - it`s server stop")
+
 
 });
