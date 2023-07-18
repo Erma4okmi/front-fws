@@ -14,7 +14,7 @@ Front-FWS имеет два вида запуска и один вид сбор�
 
 ## Установка & Использование
 
-    git clone https://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@github.com/Erma4okmi/front-fws.git
+    git clone https://github.com/Erma4okmi/front-fws.git
     cd front-fws
     npm install
     
